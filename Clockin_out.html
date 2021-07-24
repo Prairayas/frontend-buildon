@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css"></link>
+    <link rel="stylesheet" href="css/modal.css"></link>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+</html>
+
+<body>
+    
+    <header>
+        <h1>Time Tracker</h1>
+    </header>
+    <div class="MyStatus">
+        <h3>My Status</h3>
+        <div class="topic">
+            <div id="logo-img"></div>
+            <div class="account">Johnny Y.</div>
+            <div style="color: #808B96; padding-bottom: 10px;">Email: username@outlook.com</div><hr style="margin-top: 5px;">
+        </div>
+        <div class="row">
+            <div  id="p1">Software Engineer<div style="font-size: 14px; color: gray;">Position</div></div>
+            <div  id="p2">7h<div style="font-size: 14px; color: gray;">Maximum logged time</div></div>
+            <div  id="p1">Developers<div style="font-size: 14px; color: gray;">Channel</div></div>
+            <div  id="p2">6h 48m<div style="font-size: 14px; color: gray;">Logged time average</div></div>
+            <div  id="p1">Good<div style="font-size: 14px; color: gray;">Work performance</div></div>
+            <div  id="p2">Task defender<div style="font-size: 14px; color: gray;">Task completed</div></div>
+        </div>
+    </div>
+
+    <div class="Clockio">
+        <div class="CheckIn">
+            <div class="clock-container">
+                <div class="hours">
+                  <span>Hours</span>
+                  <p id='hourin'> 00 </p>
+                </div>
+                <div class="colon">:</div>
+                <div class="minutes">
+                  <span>Minutes</span>
+                  <p id='minutein'> 00 </p>
+                </div>
+                <div class="colon">:</div>
+                <div class="seconds">
+                  <span>Seconds</span>
+                  <p id='secondin'> 00 </p>
+                </div>
+            </div>
+            <button id="clockbuttonin"type="button" onclick="timein();timercount()">Clock in<div id="showin"></div></button>
+            
+        </div>
+        <div class="CheckOut">
+            <button id="clockbuttonout" type="button"onclick="timeout()">Clock out<div id="showout"></div></button>
+            <script>
+                document.querySelector('#clockbuttonout').addEventListener('click', () => {
+                  Confirm.open({
+                    title: 'Worktory Timer Check',
+                    message: 'Done!  Clock out time: ' + out,
+                  })
+                });
+              </script>
+        </div> 
+        <div class="TimerCount">
+            <div style="font-size: 15px; color: gray;">Until Check out
+                <div id="timespend"></div>
+            </div>
+        </div>
+    </div>
+    <div class="WeeklyReport">
+        <h3 class="topicWeek">Weekly report</h3>
+        <div class="static">Statics
+            <p id="graph"></p>
+        </div>
+
+    </div>
+    <script src="javascript/ModalWin.js"></script>
+    <script src="javascript/main.js"></script>
+    <script src="javascript/countdown.js"></script>
+</body>
