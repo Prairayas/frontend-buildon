@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css"></link>
-    <link rel="stylesheet" href="css/modal.css"></link>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/graph.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -11,11 +13,12 @@
 
 <body>
     
-    <header>
-        <h1>Time Tracker</h1>
-    </header>
+    <div class="title-name">
+        <a href="index.html"><i class="fas fa-arrow-left back"></i></a><span>Time Tracker</span>
+        <hr>
+    </div> <!-- title-name  -->
+    <div class="MyStatustopic"><h3>My Status</h3></div> <!-- MyStatustopic -->
     <div class="MyStatus">
-        <h3>My Status</h3>
         <div class="topic">
             <div id="logo-img"></div>
             <div class="account">Johnny Y.</div>
@@ -29,7 +32,7 @@
             <div  id="p1">Good<div style="font-size: 14px; color: gray;">Work performance</div></div>
             <div  id="p2">Task defender<div style="font-size: 14px; color: gray;">Task completed</div></div>
         </div>
-    </div>
+    </div><!-- MyStatus  -->
 
     <div class="Clockio">
         <div class="CheckIn">
@@ -51,7 +54,7 @@
             </div>
             <button id="clockbuttonin"type="button" onclick="timein();timercount()">Clock in<div id="showin"></div></button>
             
-        </div>
+        </div> <!-- CheckIn  -->
         <div class="CheckOut">
             <button id="clockbuttonout" type="button"onclick="timeout()">Clock out<div id="showout"></div></button>
             <script>
@@ -62,21 +65,21 @@
                   })
                 });
               </script>
-        </div> 
+        </div> <!-- CheckOut  -->
         <div class="TimerCount">
             <div style="font-size: 15px; color: gray;">Until Check out
-                <div id="timespend"></div>
+                <div id="timespend">8h 0m 0s</div>
             </div>
-        </div>
-    </div>
+        </div> <!-- TimerCount  -->
+    </div> <!-- Clockio  -->
     <div class="WeeklyReport">
         <h3 class="topicWeek">Weekly report</h3>
-        <div class="static">Statics
-            <p id="graph"></p>
+        <div class="static">
+            <div id="graph"></div>
         </div>
-
-    </div>
+    </div> <!-- WeeklyReport  -->
     <script src="javascript/ModalWin.js"></script>
     <script src="javascript/main.js"></script>
     <script src="javascript/countdown.js"></script>
+    <script src="javascript/graph.js"></script>
 </body>
