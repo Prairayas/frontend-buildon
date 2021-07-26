@@ -4,15 +4,55 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/graph.css">
+    <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 </html>
 
 <body>
-    
+    <div class="sidebar">
+        <div class="name">Worktory</div>
+        <div class="quote">“Make it happen <br> and Shock everyone"</div>
+
+        <div class="menu">
+                <div class="title">Department</div>
+
+                <div class="item"><a href="#">HR<i class="fas fa-angle-down dropdown"></i></a></div>
+
+                <div class="item">
+                    <div class="item"><a href="#">Financial<i class="fas fa-angle-down dropdown"></i></a></div>
+                    <div class="item">
+                  <a class="sub-btn"></i>Developers<i class="fas fa-angle-down dropdown"></i></a>
+                  <div class="sub-menu">
+                    <a href="#" class="sub-item"><i class="fa-fw fa-xs fas fa-circle status"></i>Sonja</a>
+                    <a href="#" class="sub-item"><i class="fa-fw fa-xs fas fa-circle status-offline"></i>Peter</a>
+                  </div> <!--sub menu-->
+                </div> <!-- developers-->
+
+                <div class="title">General zone</div>
+
+                <div class="item">
+                    <a class="sub-btn"></i>Announcement<i class="fas fa-angle-down dropdown"></i></a>
+                    <div class="sub-menu">
+                      <a href="#" class="sub-item"><i class="fa-fw fa-xs fas fa-circle status"></i>Sarah</a>
+                    </div> <!--Announcement-->
+
+                <div class="item"><a href="#">Lounge<i class="fas fa-angle-down dropdown"></i></a></div>
+                </div>
+                </div> <!--main item-->
+        </div> <!--sidebar menu-->
+        <div class="profile">
+            <div class="profile-content">
+                <img src="image/prai.jpg" alt="profile" style="border-radius: 40px;">
+                <span class="profile-name">Johnny<span>Y.</span></span>
+                <span class="profile-role">#SoftwareEngineer</span>
+                <a href="Clockin_out.html"><i class="far fa-clock timer"></i></a>
+                <a href="task.html"><i class="far fa-check-circle task"></i></a>            
+            </div>
+        </div> <!--sidebar end-->
     <div class="title-name">
         <a href="index.html"><i class="fas fa-arrow-left back"></i></a><span>Time Tracker</span>
         <hr>
@@ -75,9 +115,12 @@
     <div class="WeeklyReport">
         <h3 class="topicWeek">Weekly report</h3>
         <div class="static">
-            <div id="graph"></div>
+            <div id="graph">
+                <canvas id="myChart" style="width:50%;max-width:450px"></canvas>
+            </div>
         </div>
     </div> <!-- WeeklyReport  -->
+    
     <script src="javascript/ModalWin.js"></script>
     <script src="javascript/main.js"></script>
     <script src="javascript/countdown.js"></script>
